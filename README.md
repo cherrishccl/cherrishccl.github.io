@@ -1,126 +1,139 @@
-# LessOrMore
+# Yummy Jekyll Theme
 
+A Simple, Bootstrap Based Theme. Especially for developers who like to show their projects on website and like to take notes. There are also some magical features to discover. 
 
-致谢
-====================================
-+ 感谢[Less官网](http://lesscss.cn/)的样式，本Jekyll框架的样式都是基于Less官网的样式直接拷贝过来的。只是重构了JS，并且加入了Jekyll语法而已。
-+ 感谢[Github](https://github.com/)提供的代码维护和发布平台
-+ 感谢[Jekyll](https://jekyllrb.com/)团队做出如此优秀的产品
-+ 感谢[Solar](https://github.com/mattvh/solar-theme-jekyll)的原作者[Matt Harzewski](http://www.webmaster-source.com/)，在`2014.11`-`2016.09`的两年间，我的博客选用了此样式模版
+## [Live Demo](http://dongchuan.github.io/)
 
+Open issues if you find bugs or even have trouble installing jekyll or dependencies. :D
 
-使用
-====================================
+Or contact: dongchuan55@gmail.com
 
-下载
-------------------------------------
+> Strongly suggest to fork and change project name to create your GitHub Pages instead of downloading it directly. Because in the future, I will develop many funny modules like 'footprint' to show your world wide trip. Could be easier to merge new features in the future.
 
-使用git从[LessOrMore](https://github.com/luoyan35714/LessOrMore.git)主页下载项目
+## Notable Features
 
-``` bash
-git clone https://github.com/luoyan35714/LessOrMore.git
+* Compatible with Jekyll 3.x and GitHub Pages
+* Based on Bootstrap
+* [Github Module](http://dongchuan.github.io/open-source) to show your popular projects in a single page and on sidebar automatically. (Datas are retreived by github metadata instead of by api calls, so no delay) 
+* [Post Module](http://dongchuan.github.io/blog) to show all your posts with timeline
+* [Bookmark Module](http://dongchuan.github.io/bookmark) to establish a quick mark about all libs/tools/books you like to use.
+* [Post Navigation Module](http://dongchuan.github.io/css/2016/04/22/CSS-Animation.html) to generat a quick directory of your post by titles/subtitles automatically.
+* Support [Disqus Comment](https://disqus.com/home/explore/)
+* Support [Google Analytics](https://analytics.google.com/analytics/web/)
+
+Features in future:
+* A Footprint module to show all your travel around the world
+* Feature to share. (Facebook, twitter, evernote and so on)
+* (Not sure) A embeded todo list. (Not sure) to travel, to complete, to do for your parents, etc. To do in life!
+* Creative ideas to discuss with you :P
+
+## Install and setup
+
+Before using it, you may need [Bower](http://bower.io/) and [Bundler](http://bundler.io/) on your local to install dependencies.
+
+1. Fork code and clone
+2. Run `bower install` to install all dependencies in [bower.json](https://github.com/DONGChuan/DONGChuan.github.io/blob/master/bower.json)
+3. Run `bundle install` to install all dependencies in [Gemfile](https://github.com/DONGChuan/DONGChuan.github.io/blob/master/Gemfile)
+4. Update `_config.yml` with your own settings.
+5. Add posts in `/_posts`
+6. Commit to your own Username.github.io repository.
+7. Then come back to star this theme!
+
+> When install dependencies by bundler or gem, you may have some errors depending on your environment.
+
+> Error about `json`. Check response of [Massimo Fazzolari on Stackoverflow](http://stackoverflow.com/questions/8100891/the-json-native-gem-requires-installed-build-tools) to quick fix your problem. (Please also use latest version instead of 1.9.3 mentioned in the response)
+  
+> Error about `jekyll-paginate`. Please check [here](http://stackoverflow.com/questions/35401566/dont-have-jekyll-paginate-or-one-of-its-dependencies-installed)
+
+> Error about `SSL_connect`. Please check [here](http://stackoverflow.com/questions/15305350/gem-install-fails-with-openssl-failure) and [here](http://railsapps.github.io/openssl-certificate-verify-failed.html)
+
+> For the moment, when you test on your local, you need to keep internet connection. Bug will be fixed soon.
+
+## How to use
+
+#### Create a new post
+
+Create a `.md` file inside `_posts` folder.
+
+Name the file according to the standard jekyll format.
+
+```
+2016-01-19-i-love-yummy.md
 ```
 
-配置
-------------------------------------
+Write the Front Matter and content in the file.
 
-`LessOrMore`项目需要配置的只有一个文件`_config.yml`，打开之后按照如下进行配置。
-
-> 特别注意`baseurl`的配置。如果是`***.github.io`项目，不修改为空''的话，会导致JS,CSS等静态资源无法找到的错误
-
-``` bash
-name: 博客名称
-email: 邮箱地址
-author: 作者名
-url: 个人网站
-# baseurl修改为项目名，如果项目是'***.github.io'，则设置为空''
-baseurl: "/LessOrMore"
-resume_site: 个人简历网站
-github: github地址
-github_username: github用户名称
-# 请到百度统计官网[https://tongji.baidu.com/](https://tongji.baidu.com/)申请自己的网站ID并在此处替换，否则将无法正常统计访问量
-baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
-# 请到revolvermaps [http://www.revolvermaps.com/?target=setupgl](http://www.revolvermaps.com/?target=setupgl)申请自己的网站ID并在此处替换，否则将无法正常统计访问量
-revolvermaps: 5ytn1ssq6za
 ```
-
-关于统计
-------------------------------------
-
-本项目支持三种统计，分别是
-
-+ [百度统计](https://tongji.baidu.com)
-
-百度统计是后台统计，并没有再页面有任何展示，但是可以通过登录百度统计官网查看更详细的访问记录分析。
-当Fork本项目之后需要去百度统计官网申请自己的baidu统计ID替换 `_config.yml` 文件中的 `baidu_analysis`。
-
-+ [revolvermaps地图统计](http://www.revolvermaps.com/)
-
-revolvermaps地图统计是展示在左侧当行栏的地图展示，具体展示形式可以去官网定制。
-当Fork本项目之后需要去revolvermaps地图官网申请自己的统计ID， 替换`_config.yml` 文件中的 `revolvermaps`。
-
-+ [不蒜子统计](http://busuanzi.ibruce.info/)
-
-不蒜子统计是出现在页面右上角的`本站总访问量n次`统计，本统计会自动识别客户所对应的域名，根据不同域名统计，所以并不需要Fork本项目者做任何修改。
-更多不蒜子的展示方式可以去官网查看。
-
-
-如何写文章
-------------------------------------
-
-在`LessOrMore/_posts`目录下新建一个文件，可以创建文件夹并在文件夹中添加文件，方便维护。在新建文件中粘贴如下信息，并修改以下的`titile`,`date`,`categories`,`tag`的相关信息，添加`* content {:toc}`为目录相关信息，在进行正文书写前需要在目录和正文之间输入至少2行空行。然后按照正常的Markdown语法书写正文。
-
-``` bash
 ---
 layout: post
-#标题配置
-title:  标题
-#时间配置
-date:   2016-08-27 01:08:00 +0800
-#大类配置
-categories: document
-#小类配置
-tag: 教程
+title: Post title
+category: Category
+tags: [tag1, tag2]
 ---
-
-* content
-{:toc}
-
-
-我是正文。我是正文。我是正文。我是正文。我是正文。我是正文。
 ```
 
-执行
-------------------------------------
+Please find examples [here](https://github.com/DONGChuan/DONGChuan.github.io/tree/master/_posts)
 
-``` bash
-jekyll server
+> Jekyll supports different structure of repository. You could just create as many folders as you want under _posts. Then jekyll will look through all folders/subfolders to find your posts. So cool, right? :D
+
+#### [Post Navigation Module](http://dongchuan.github.io/css/2016/04/22/CSS-Animation.html)
+
+When writing post, please always follow this format:
+
+```
+Description about this post, blablabla
+
+## Title A
+
+### Title A-1
+
+### Title A-2
+
+## Title B
+
+### Title B-1
+
 ```
 
-效果
-------------------------------------
-打开浏览器并输入URL`http://localhost:4000/`,回车。
+So, Title A, A-1, A-2, Title B, B-1 will be detected and created as a directory
 
+For example, [a demo post](https://github.com/DONGChuan/DONGChuan.github.io/edit/master/_posts/2016-04-22-CSS-Animation.md)
 
-为什么重复造轮子
-====================================
+But if you do not like it or your post is quite short. You want to hide this navigation to make your post occupy your full screen. You just need to set **no-post-nav:true** in the Front Matter of the post where you want to hide this feature :D
 
-很明显，我在重复造轮子。在13年接触到GIT，14年末接触到Jekyll，然后搭建了自己的博客，当时是选用了[JekyllThemes](http://jekyllthemes.org/)上的[Solar](https://github.com/mattvh/solar-theme-jekyll)主题，一直到现在。不过中间一直感觉页面风格还是偏暗，阅读不方便。并且有一些小的细节做的不是很好。在页面的跨平台浏览上有一些瑕疵。并且不区分一级标题和二级标题，导致没有重点强调。诸如此类，用了2年，用的越多，越发吃力，中间就一直在寻找新的能够让我一眼认定的主题。
+#### [Github Module](http://dongchuan.github.io/open-source)
 
-虽然设计好看的主题很多。但是真正适合拿来做博客的却不多。中间一直没有找到合适的主题。直到有一天看到Less官网的主题之后，豁然觉得这就是我的博客想要的样子。简单而又不平凡。所以就决定了要把博客迁移到这个主题，然后拿了两天晚上来把这个主题做出来。
+This module will get automatically all your repository information from github. But to test on your local, you must keep internet connection. 
+In the future, it will also show the repositories you contributed a lot and the ones of your organization.
 
-重复造了轮子，但是这个是迄今为止自己觉得最适合我的博客的轮子，所以是值得的！
+#### [Bookmark Module](http://dongchuan.github.io/bookmark)
 
-关于作者
-====================================
+To add new marks, you only need to edit [bookmark.md](https://github.com/DONGChuan/Yummy-Jekyll/blob/master/bookmark.md).
 
-热爱开源，热爱折腾的Java程序猿。更多个人信息和联系方式可以参照[我的简介](http://www.hifreud.com/Resume.io/)。
+#### [Customize About Page](http://dongchuan.github.io/about)
 
-写在最后
-====================================
+Feel free to customize about.me page to show yourself. You only need to modify [about.md](https://github.com/DONGChuan/Yummy-Jekyll/blob/master/about.md) and [about.html](https://github.com/DONGChuan/Yummy-Jekyll/blob/master/_includes/about.html)
 
-如果你也像我一样在寻觅一个简洁的博客主题。不妨试下LessOrMore。
+## ToDo
 
-之前此处是有打赏功能的，不过最近在整理自己，发现打赏功能偏离了我写这个Jekyll主题的初衷，所以删除了打赏功能。
+- [ ] List posts by a specified tag
+- [ ] New module FootPrint to show your world around trips
+- [ ] Show projects from your orgnization on github. (Siderbar, in open-source page)
+- [ ] To fix bug - could only test on local with internet connected.
 
-非常感谢之前打赏过的朋友们！！
+## Contributor
+
+* [DONGChuan](https://github.com/DONGChuan)
+* [Mojtaba Koosej](https://github.com/mkoosej)
+* [shahsaurabh0605](https://github.com/shahsaurabh0605)
+* [Z-Beatles](http://www.waynechu.cn/)
+* [LM450N](https://github.com/LM450N)
+* [XhmikosR](https://github.com/XhmikosR)
+
+## License
+
+The Apache License 2.0
+
+Copyright (c) 2016 DONG Chuan
+
+Check [LICENSE](https://github.com/DONGChuan/DONGChuan.github.io/blob/master/LICENSE) file and [official website](http://www.apache.org/licenses/LICENSE-2.0) for details
