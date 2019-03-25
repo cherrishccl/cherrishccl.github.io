@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Linux目录与文件
-tags: Linux
-categories: Linux
+tags: Linux File
+categories: Linux 
 ---
 
 

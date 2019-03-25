@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux进程管理
-tags: Linux 
+tags: Linux 进程管理
 categories: Linux
 ---
 

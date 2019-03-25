@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux权限管理
-tags: Linux
+tags: Linux 权限管理
 categories: Linux
 ---
 
