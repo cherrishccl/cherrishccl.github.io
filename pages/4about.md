@@ -6,4 +6,4 @@ icon: octicon-heart
 published: false
 ---
 
-自我介绍什么的，最讨厌了！
+You still have lots more to work on!
