@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Linux计划任务
-tags: 计划任务 Linux
+title: Linux定时任务
+tags: Linux 定时任务
 categories: Linux
 ---
 

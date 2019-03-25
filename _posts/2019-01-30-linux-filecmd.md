@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux目录与文件
-tags: Linux 命令
+tags: Linux
 categories: Linux
 ---
 

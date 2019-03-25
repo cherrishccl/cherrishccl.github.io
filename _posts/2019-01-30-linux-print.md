@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Linux打印
-tags:  Linux 打印
+title: Linux打印输出
+tags:  Linux 
 categories: Linux
 ---
 
