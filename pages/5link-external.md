@@ -5,6 +5,7 @@ permalink: /link/
 icon: octicon-link-external
 ---
 
-### [百度](http://www.lxy520.net/)
+### [博客原型](http://blog.rainyalley.com/)
 
-### [谷歌](https://google.com/)
+### [参考1](http://www.lxy520.net/)
+
