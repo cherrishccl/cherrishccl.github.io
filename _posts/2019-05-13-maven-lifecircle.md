@@ -4,7 +4,7 @@ A Build Lifecycle is Made Up of Phases.A Build Phase is Made Up of Plugin Goals.
 用了很久的maven了，直到最近才发现自已对maven的生命周期都还不了解，以前一直理解错了，一直把default的一些phases当成了maven的生命周期。现记录一下：Maven的生命周期就是对所有的构建过程进行抽象和统一。包含了项目的清理、初始化、编译、测试、打包、集成测试、验证、部署和站点生成等几乎所有的构建步骤。Maven的生命周期是抽象的，即生命周期不做任何实际的工作，实际任务由插件完成，类似于设计模式中的模板方法。
 Maven有三套相互独立的生命周期，分别是clean、default和site。每个生命周期包含一些阶段（phase），阶段是有顺序的，后面的阶段依赖于前面的阶段。
 ```
-![maven-lifecircle](maven-lifecircle.png)
+![maven-lifecircle](./static/img/maven-lifecircle.png)
 ## 生命周期
 ### Clean
 * pre-clean
